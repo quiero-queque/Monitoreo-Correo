@@ -2,7 +2,7 @@
 
 Herramienta en Python que audita la autenticación de correo (**SPF, DKIM y DMARC**) de un dominio y entrega un "chequeo de salud" entendible para personas no técnicas.
 
-> Proyecto académico (Desafío 1). Solo consulta información pública vía DNS.
+> Proyecto Laboratorio de redes (Desafío).
 
 ## ¿Qué problema resuelve?
 
