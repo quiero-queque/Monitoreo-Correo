@@ -1,1 +1,4 @@
-
+dnspython
+cryptography
+pytest
+rich
