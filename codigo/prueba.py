@@ -1,6 +1,4 @@
 from dns_utils import obtener_spf, obtener_dmarc, parsear_etiquetas
-
-# Importa la función que analiza el registro SPF y detecta posibles problemas
 from analisis_spf import analizar_spf
 
 # Define el dominio que se utilizará para realizar las consultas y el análisis
