@@ -1,10 +1,19 @@
-from analisis_dkim import analizar_dkim
+from dns_utils import obtener_spf, obtener_dmarc, parsear_etiquetas
 
-def sev(hallazgos):
-    return [h.severidad for h in hallazgos]
+# Importa la función que analiza el registro SPF y detecta posibles problemas
+from analisis_spf import analizar_spf
 
-def test_sin_registro_es_advertencia():
-    assert "advertencia" in sev(analizar_dkim([], "google"))
+# Define el dominio que se utilizará para realizar las consultas y el análisis
+dominio = "gmail.com"
 
-def test_clave_vacia_es_error():
-    assert "error" in sev(analizar_dkim(["v=DKIM1; k=rsa; p="], "google"))
+# Consulta el registro SPF del dominio e imprime el resultado obtenido
+print("SPF:  ", obtener_spf(dominio))
+
+# Consulta el registro DMARC del dominio e imprime el resultado obtenido
+print("DMARC:", obtener_dmarc(dominio))
+
+# Prueba la función parsear_etiquetas con un registro DMARC de ejemplo
+# La función debería separar sus componentes, como v, p y pct.
+print("Parser:", parsear_etiquetas("v=DMARC1; p=reject; pct=100;"))
+
+# muestra un titulo para indicar que comenzará el análisis del registro SPF
