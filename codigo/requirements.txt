@@ -1,4 +1,0 @@
-dnspython
-cryptography
-pytest
-rich
