@@ -1,6 +1,6 @@
 import dns.resolver
 
-# Define una función que recibe un nombre DNS (por ejemplo "gmail.com").
+# Define una función que recibe un nombre DNS
 def obtener_txt(nombre):
    
     """devuelve la lista de textos TXT de un nombre DNS ([] si no existe o no tiene TXT).""" #descripcion
